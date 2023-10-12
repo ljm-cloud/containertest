@@ -7,18 +7,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import tk.mybatis.spring.annotation.MapperScan;
 
 import java.util.Date;
 import java.util.List;
 
 @SpringBootTest(classes = ContainertestApplicationEnv.class)
-@MapperScan("com.example.containertest.mapper")
-@ServletComponentScan("com.example.containertest")
-@ComponentScan("com.example.containertest")
 @Slf4j
 class ContainertestApplicationTests {
 
