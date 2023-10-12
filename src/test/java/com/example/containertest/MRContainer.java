@@ -69,7 +69,7 @@ public class MRContainer {
         if(initMysqlContainer) {
             log.info("mysql container starting...");
 
-            boolean mysqlCustomImageLock = Boolean.valueOf(System.getProperty("testcontainers.mysql.customimage.lock", "true"));
+            boolean mysqlCustomImageLock = Boolean.valueOf(System.getProperty("testcontainers.mysql.customimage.lock", "false"));
 
             CompletableFuture<Void> mysqlCF = CompletableFuture.runAsync(() -> {
                 if (mysqlCustomImageLock && reentrantLock.tryLock() && withDataMysqlImageName == null) {
